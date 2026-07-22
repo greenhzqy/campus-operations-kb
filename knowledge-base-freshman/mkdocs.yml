@@ -1,0 +1,61 @@
+site_name: 重邮新生干货站
+site_description: 校园攻略 · 选课指南 · 复习资料 — 重邮学长学姐为你整理的入学必备干货
+theme:
+  name: material
+  language: zh
+  palette:
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: 深色模式
+    - scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: 浅色模式
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search:
+      lang: zh
+      separator: '[\s​\-、，。！？；：""''（）]+'
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - 🏠 首页: index.md
+  - 🏫 校园攻略:
+      - 攻略总览: gonglve/index.md
+      - 宿舍长啥样: gonglve/001-宿舍长啥样.md
+      - 七个食堂: gonglve/002-七个食堂.md
+      - 一分钟逛校园: gonglve/003-一分钟逛校园.md
+      - 开学必备清单: gonglve/004-开学必备清单.md
+      - 军训生存指南: gonglve/005-军训生存指南.md
+      - 宿舍违禁品清单: gonglve/006-宿舍违禁品清单.md
+      - 志愿与劳动时长: gonglve/007-志愿与劳动时长.md
+  - 🎓 入学指南:
+      - 指南总览: xinsheng/index.md
+      - 选课避坑指南: xinsheng/zhinan/001-选课避坑指南.md
+      - 志愿与劳动时长要求: xinsheng/zhinan/002-志愿与劳动时长要求.md
+      - 挂VPN教程: xinsheng/zhinan/003-挂VPN教程.md
+  - 📚 复习资料:
+      - 资料总览: kaoshi/index.md
+      - 各科目资料清单: kaoshi/001-各科目资料清单.md

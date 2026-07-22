@@ -1,0 +1,22 @@
+/* 修复左侧导航栏无法滚动的问题 */
+.md-sidebar__scrollwrap {
+    overflow-y: auto !important;
+    max-height: calc(100vh - 100px);
+}
+
+/* 确保侧边栏内部可滚动 */
+.md-nav--primary {
+    overflow-y: visible;
+}
+
+/* 导航标题不换行，保持紧凑 */
+.md-nav__item .md-nav__link {
+    white-space: nowrap;
+}
+
+/* 搜索框固定在顶部 */
+.md-search {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}

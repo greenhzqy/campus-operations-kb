@@ -25,6 +25,9 @@ theme:
     - search.share
     - content.code.copy
 
+extra_css:
+  - stylesheets/extra.css
+
 plugins:
   - search:
       lang: zh

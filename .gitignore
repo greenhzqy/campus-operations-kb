@@ -1,6 +1,7 @@
 # MkDocs 构建输出（可随时重新构建）
 knowledge-base/site/
 knowledge-base-team/site/
+knowledge-base-freshman/site/
 
 # 原始材料（PDF/图片/大文件，951MB）
 原始材料/

@@ -1,0 +1,16 @@
+/* 修复左侧导航栏无法滚动的问题 */
+.md-sidebar__scrollwrap {
+    overflow-y: auto !important;
+    max-height: calc(100vh - 100px);
+}
+.md-nav--primary {
+    overflow-y: visible;
+}
+.md-nav__item .md-nav__link {
+    white-space: nowrap;
+}
+.md-search {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
