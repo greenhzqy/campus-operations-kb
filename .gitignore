@@ -8,9 +8,39 @@ knowledge-base-team/site/
 # Claude 本地配置
 .claude/settings.local.json
 
+# ========== 安全：防止泄露密钥 ==========
+# 环境变量文件
+.env
+.env.*
+!.env.example
+
+# API密钥和凭证
+*apikey*
+*api_key*
+*secret*
+*credential*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Claude/LLM 配置文件（可能含token）
+.claude/credentials*
+.claude/auth*
+
+# 其他工具的本地配置
+config.local.*
+settings.local.*
+*.local.json
+
+# ========== 常规忽略 ==========
 # Python 缓存
 __pycache__/
 *.pyc
+*.pyo
+
+# Node
+node_modules/
 
 # 临时文件
 *.zip
