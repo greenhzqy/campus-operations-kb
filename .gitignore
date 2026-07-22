@@ -1,0 +1,23 @@
+# MkDocs 构建输出（可随时重新构建）
+knowledge-base/site/
+knowledge-base-team/site/
+
+# 原始材料（PDF/图片/大文件，951MB）
+原始材料/
+
+# Claude 本地配置
+.claude/settings.local.json
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 临时文件
+*.zip
+*.tmp
+~$*
+
+# 系统文件
+Thumbs.db
+.DS_Store
+desktop.ini

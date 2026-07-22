@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>重邮学长抖音号 · 选题规划与内容组合拳</title>
+<style>
+  :root {
+    --bg: #f8f9fa; --card: #ffffff; --text: #2c3e50; --text2: #5a6c7d;
+    --border: #e2e8f0; --accent: #2563eb; --alight: #eff6ff;
+    --red: #dc2626; --rlight: #fef2f2; --amber: #d97706; --alight2: #fffbeb;
+    --green: #16a34a; --glight: #f0fdf4; --purple: #7c3aed; --plight: #f5f3ff;
+    --pink: #db2777; --pinklight: #fdf2f8;
+    --radius: 10px; --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.7; padding: 24px 16px 80px;
+  }
+  .container { max-width: 900px; margin:0 auto; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #111827 0%, #1e3a5f 50%, #2563eb 100%);
+    color: #fff; border-radius: 14px; padding: 36px 32px; margin-bottom: 28px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.2);
+  }
+  .header h1 { font-size: 27px; font-weight: 800; margin-bottom: 6px; }
+  .header .sub { font-size: 14px; opacity: .85; }
+  .header .tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+  .header .tag {
+    background: rgba(255,255,255,.12); backdrop-filter: blur(4px);
+    padding: 4px 14px; border-radius: 20px; font-size: 12px;
+  }
+
+  /* Cards */
+  .card {
+    background: var(--card); border:1px solid var(--border);
+    border-radius: var(--radius); padding: 28px 30px; margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+  .card h2 { font-size: 20px; font-weight: 700; margin-bottom: 4px; display:flex; align-items:center; gap:8px; }
+  .card .sd { color: var(--text2); font-size:13px; margin-bottom:18px; padding-bottom:14px; border-bottom:1px solid var(--border); }
+  .card h3 { font-size:16px; font-weight:600; margin:22px 0 10px; color:#1e3a5f; }
+
+  /* Funnel visual */
+  .funnel { margin:18px 0; }
+  .funnel-layer {
+    padding: 16px 20px; border-radius: 10px; margin-bottom: 10px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .funnel-layer .fl-pct {
+    flex-shrink: 0; width: 64px; height: 64px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 20px; color: #fff;
+  }
+  .fl1 { background: #eff6ff; border:1px solid #bfdbfe; }
+  .fl1 .fl-pct { background: #2563eb; }
+  .fl2 { background: #f5f3ff; border:1px solid #ddd6fe; }
+  .fl2 .fl-pct { background: #7c3aed; }
+  .fl3 { background: #fdf2f8; border:1px solid #fbcfe8; }
+  .fl3 .fl-pct { background: #db2777; }
+  .fl-body h4 { font-size:15px; font-weight:700; margin-bottom:2px; }
+  .fl-body p { font-size:13px; color:var(--text2); margin:0; }
+
+  /* Arrow between funnels */
+  .funnel-arrow { text-align:center; font-size:22px; color:#94a3b8; margin:6px 0; }
+
+  /* Phase timeline */
+  .phases { display:grid; grid-template-columns: repeat(4,1fr); gap:12px; margin:16px 0; }
+  @media (max-width:700px) { .phases { grid-template-columns:1fr 1fr; } }
+  .phase-card {
+    border-radius: 10px; padding: 16px; border:1px solid var(--border);
+    position: relative; overflow: hidden;
+  }
+  .phase-card::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:4px;
+  }
+  .ph1::before { background: #2563eb; }
+  .ph2::before { background: #7c3aed; }
+  .ph3::before { background: #db2777; }
+  .ph4::before { background: #16a34a; }
+  .phase-card .ph-num { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; color:var(--text2); }
+  .phase-card .ph-title { font-size:15px; font-weight:700; margin:4px 0 2px; }
+  .phase-card .ph-time { font-size:11px; color:var(--text2); margin-bottom:6px; }
+  .phase-card .ph-do { font-size:12px; color:var(--text2); line-height:1.6; }
+
+  /* Topic cards */
+  .topic-card {
+    border:1px solid var(--border); border-radius: 10px; padding: 18px 20px;
+    margin-bottom: 10px; background: #fafbfc;
+    display: flex; gap: 16px; align-items: flex-start;
+  }
+  .topic-card .tc-badge {
+    flex-shrink: 0; padding: 6px 12px; border-radius: 20px;
+    font-size: 11px; font-weight: 700; letter-spacing: .3px; white-space: nowrap;
+  }
+  .bd-blue { background: #eff6ff; color: #2563eb; }
+  .bd-purple { background: #f5f3ff; color: #7c3aed; }
+  .bd-pink { background: #fdf2f8; color: #db2777; }
+  .topic-card .tc-body { flex:1; }
+  .topic-card .tc-title { font-weight:700; font-size:15px; margin-bottom:4px; }
+  .topic-card .tc-meta { font-size:11px; color:var(--text2); margin-bottom:6px; }
+  .topic-card .tc-meta span { margin-right:12px; }
+  .topic-card .tc-desc { font-size:13px; color:var(--text); line-height:1.6; }
+  .topic-card .tc-implant {
+    font-size:12px; margin-top:8px; padding:6px 10px; border-radius:6px;
+    display: inline-block;
+  }
+  .implant-no { background: #f1f5f9; color: #64748b; }
+  .implant-soft { background: #f5f3ff; color: #7c3aed; }
+  .implant-hard { background: #fdf2f8; color: #db2777; }
+
+  /* Timeline */
+  .timeline { position:relative; padding-left:28px; margin:16px 0; }
+  .timeline::before {
+    content:''; position:absolute; left:12px; top:0; bottom:0; width:2px; background: var(--border);
+  }
+  .tl-item { position:relative; margin-bottom:14px; }
+  .tl-item::before {
+    content:''; position:absolute; left:-20px; top:6px;
+    width:10px; height:10px; border-radius:50%; background: var(--accent);
+  }
+  .tl-item .tl-time { font-size:11px; color:var(--text2); font-weight:600; }
+  .tl-item .tl-text { font-size:14px; }
+
+  /* Checklist */
+  .check-grid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:8px 0; }
+  @media (max-width:600px) { .check-grid { grid-template-columns:1fr; } }
+  .check-item {
+    display:flex; align-items:center; gap:8px; font-size:13px;
+    padding:6px 10px; border-radius:6px; background: #f8fafc;
+  }
+
+  /* KPI table */
+  .table-wrap { overflow-x:auto; margin:14px 0; border:1px solid var(--border); border-radius:8px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  thead { background:#f1f5f9; }
+  th { text-align:left; padding:11px 14px; font-weight:600; font-size:13px; color:#475569; }
+  td { padding:11px 14px; border-top:1px solid var(--border); }
+  tr:first-child td { border-top:none; }
+  .td-ok { color: var(--green); font-weight: 600; }
+  .td-warn { color: var(--amber); font-weight: 600; }
+
+  /* Bottom */
+  .big-quote {
+    background: linear-gradient(135deg, #1e3a5f, #2563eb);
+    color: #fff; border-radius: 14px; padding: 28px 32px;
+    margin: 28px 0; text-align: center; font-size: 16px; font-weight: 600;
+    line-height: 1.8;
+  }
+
+  .footnote {
+    padding:16px 18px; background:#f1f5f9; border-radius:10px;
+    font-size:12px; color:#64748b; text-align:center; line-height:1.8;
+  }
+
+  @media print {
+    body { background:#fff; padding:0; }
+    .card { box-shadow:none; break-inside:avoid; }
+    .header { box-shadow:none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ====== HEADER ====== -->
+<div class="header">
+  <h1>🎬 重邮学长抖音号 · 选题与内容规划</h1>
+  <div class="sub">定位：重邮在读学长 · 新生干货 · 靠谱人设 ｜ 变现：软推驾校 + 二手书<br>目标人群：准大一新生（6-8月）+ 大一在读（9-10月） ｜ 运营窗口：约1年</div>
+  <div class="tags">
+    <span class="tag">三层漏斗</span><span class="tag">20条选题</span><span class="tag">4阶段发布</span><span class="tag">组合拳打法</span>
+  </div>
+</div>
+
+<!-- ====== 一、三层漏斗 ====== -->
+<div class="card">
+  <h2>📐 一、内容策略总纲：三层漏斗</h2>
+  <p class="sd">90%的人刷到你是想看新生攻略，不是想报驾校。先用干货留住人，再用软植入筛选意向，最后私信转化。</p>
+
+  <div class="funnel">
+    <div class="funnel-layer fl1">
+      <div class="fl-pct">70%</div>
+      <div class="fl-body">
+        <h4>第一层：泛吸引</h4>
+        <p>重邮校园干货 · 无植入 · 纯涨粉。目的：让新生关注你、信任你。选题：宿舍、食堂、校园、军训、选课、社团……</p>
+      </div>
+    </div>
+    <div class="funnel-arrow">⬇</div>
+    <div class="funnel-layer fl2">
+      <div class="fl-pct">25%</div>
+      <div class="fl-body">
+        <h4>第二层：软种草</h4>
+        <p>开学准备 / 大学生活规划 · 顺带提一句学车或二手书。目的：埋下需求种子，让新生主动私信。一句话植入，不硬推。</p>
+      </div>
+    </div>
+    <div class="funnel-arrow">⬇</div>
+    <div class="funnel-layer fl3">
+      <div class="fl-pct">5%</div>
+      <div class="fl-body">
+        <h4>第三层：促转化</h4>
+        <p>学车避坑经验分享 · 引导私信 · 推代理微信。目的：成交。最多1条视频，绝不超过总量的5%。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 二、四阶段 ====== -->
+<div class="card">
+  <h2>🗓️ 二、发布时间节奏（组合拳）</h2>
+  <p class="sd">不是一次性发完，而是按新生时间线分阶段出牌，每个阶段目的不同</p>
+
+  <div class="phases">
+    <div class="phase-card ph1">
+      <div class="ph-num">Phase 1</div>
+      <div class="ph-title">🏃 抢跑期</div>
+      <div class="ph-time">6月底 - 7月中</div>
+      <div class="ph-do">关键词：<strong>占坑</strong><br>发宿舍、食堂、逛校园<br><span style="color:#dc2626;">❌ 零植入</span><br>目的：占搜索位 + 涨粉</div>
+    </div>
+    <div class="phase-card ph2">
+      <div class="ph-num">Phase 2</div>
+      <div class="ph-title">🤝 信任建设期</div>
+      <div class="ph-time">7月中 - 8月中</div>
+      <div class="ph-do">关键词：<strong>种草</strong><br>发清单、规划、开销、军训<br><span style="color:#7c3aed;">🟣 一句话软植入</span><br>目的：建立信任 + 引发私信</div>
+    </div>
+    <div class="phase-card ph3">
+      <div class="ph-num">Phase 3</div>
+      <div class="ph-title">🎯 转化冲刺期</div>
+      <div class="ph-time">8月下 - 9月中</div>
+      <div class="ph-do">关键词：<strong>收割</strong><br>发选课、考证、学车避坑<br><span style="color:#db2777;">🔴 促转化视频 + 私信转化</span><br>目的：成交黄金窗口</div>
+    </div>
+    <div class="phase-card ph4">
+      <div class="ph-num">Phase 4</div>
+      <div class="ph-title">🌱 维护期</div>
+      <div class="ph-time">9月下 - 10月</div>
+      <div class="ph-do">关键词：<strong>维持</strong><br>发社团、图书馆、期末攻略<br><span style="color:#16a34a;">🟢 偶尔二手书软植</span><br>目的：维持涨粉 + 被动接单</div>
+    </div>
+  </div>
+
+  <h3>发布节奏总览</h3>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-time">第1-2周 · 6月底-7月中</div><div class="tl-text"><strong>抢跑期：</strong>宿舍长啥样 → 7个食堂 → 逛校园 → 社团推荐。零植入，纯涨粉。</div></div>
+    <div class="tl-item"><div class="tl-time">第3-4周 · 7月中-8月初</div><div class="tl-text"><strong>开始种草：</strong>开学清单 → 大一最该做的5件事（首次软提学车）→ 一个月开销（顺带提学车预算）</div></div>
+    <div class="tl-item"><div class="tl-time">第5周 · 8月上旬</div><div class="tl-text"><strong>唯一促转化视频：</strong>「学车怎么选」+ 配一条纯娱乐内容（周边好玩）稀释推销感</div></div>
+    <div class="tl-item"><div class="tl-time">第6-7周 · 8月中-9月初</div><div class="tl-text"><strong>冲刺收割：</strong>开学待办（再提学车）→ 军训指南 → 选课避坑 → 值得考的证（自然植入驾照）</div></div>
+    <div class="tl-item"><div class="tl-time">第8-10周 · 9月中-10月</div><div class="tl-text"><strong>稳定维护：</strong>大一最没必要做的事（首推二手书）→ 大一上学期时间线 → 社团/图书馆/期末攻略</div></div>
+  </div>
+</div>
+
+<!-- ====== 三、第一层：泛吸引 ====== -->
+<div class="card">
+  <h2>📗 三、第一层选题：泛吸引（70% · 14条 · 零植入）</h2>
+  <p class="sd">这层是基本盘。每条视频都是一块信任砖，14条砖垒起来，新生才会信你。</p>
+
+  <div class="topic-card">
+    <span class="tc-badge bd-blue">选题 1</span>
+    <div class="tc-body">
+      <div class="tc-title">🏠 重邮宿舍长啥样？新生必看</div>
+      <div class="tc-meta"><span>📅 7月初</span><span>⏱ 40-60秒</span><span>📂 食宿条件材料</span></div>
+      <div class="tc-desc">外景 → 内景 → 标配（空调/热水器/宽带/洗衣机）。最后引导「还想看什么评论区告诉我」</div>
+      <span class="tc-implant implant-no">❌ 零植入</span>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <span class="tc-badge bd-blue">选题 2</span>
+    <div class="tc-body">
+      <div class="tc-title">🍜 重邮7个食堂！哪个最好吃？</div>
+      <div class="tc-meta"><span>📅 7月初</span><span>⏱ 45-60秒</span><span>📂 食宿条件材料</span></div>
+      <div class="tc-desc">7个食堂快闪，每个配1张招牌菜图+一句话点评。「中心食堂的三鲜米线，重邮人心中的yyds」</div>
+      <span class="tc-implant implant-no">❌ 零植入</span>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <span class="tc-badge bd-blue">选题 3</span>
+    <div class="tc-body">
+      <div class="tc-title">🗺️ 一分钟逛完重邮校园</div>
+      <div class="tc-meta"><span>📅 7月中</span><span>⏱ 50-70秒</span><span>📂 地图册材料</span></div>
+      <div class="tc-desc">腾飞门→三教→图书馆→信科大楼→雨红莲→风雨操场→樱花大道。轻快BGM+地名标注。</div>
+      <span class="tc-implant implant-no">❌ 零植入</span>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <span class="tc-badge bd-blue">选题 4</span>
+    <div class="tc-body">
+      <div class="tc-title">📋 重邮新生开学必备清单</div>
+      <div class="tc-meta"><span>📅 8月上</span><span>⏱ 40-50秒</span><span>📂 自整理</span></div>
+      <div class="tc-desc">证件→生活→学习，快速过清单。结尾「完整清单截图私信我发你」（引导私信但不推销）</div>
+      <span class="tc-implant implant-no">❌ 零植入</span>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <span class="tc-badge bd-blue">选题 5</span>
+    <div class="tc-body">
+      <div class="tc-title">⚠️ 重邮新生选课避坑指南</div>
+      <div class="tc-meta"><span>📅 8月下</span><span>⏱ 40-50秒</span><span>📂 个人经验</span></div>
+      <div class="tc-desc">抢课时间/哪些老师给分高/体育课怎么选。口语化，像学长在叮嘱。</div>
+      <span class="tc-implant implant-no">❌ 零植入</span>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <span class="tc-badge bd-blue">选题 6</span>
+    <div class="tc-body">
+      <div class="tc-title">🎢 重邮周边有什么好玩的</div>
+      <div class="tc-meta"><span>📅 8月中</span><span>⏱ 40-50秒</span><span>📂 个人经验</span></div>
+      <div class="tc-desc">南山/一棵树观景台/南滨路/火锅店。每个地方一句话推荐。</div>
+      <span class="tc-implant implant-no">❌ 零植入</span>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <span class="tc-badge bd-blue">选题 7</span>
+    <div class="tc-body">
+      <div class="tc-title">🪖 军训生存指南 · 重邮版</div>
+      <div class="tc-meta"><span>📅 8月下</span><span>⏱ 40-50秒</span><span>📂 个人经验</span></div>
+      <div class="tc-desc">必备物品（防晒/鞋垫/水杯/润喉糖）+ 时间安排 + 偷懒小技巧。新生最大焦虑源之一，必爆选题。</div>
+      <span class="tc-implant implant-no">❌ 零植入</span>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <span class="tc-badge bd-blue">选题 8</span>
+    <div class="tc-body">
+      <div class="tc-title">📅 重邮大一上学期时间线</div>
+      <div class="tc-meta"><span>📅 9月初</span><span>⏱ 50-60秒</span><span>📂 个人经验</span></div>
+      <div class="tc-desc">9月军训→10月选课稳定→11月期中→12月期末→1月回家。给新生一个清晰的节奏感。</div>
+      <span class="tc-implant implant-no">❌ 零植入</span>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <span class="tc-badge bd-blue">选题 9-14</span>
+    <div class="tc-body">
+      <div class="tc-title">📦 备选储备选题</div>
+      <div class="tc-meta"><span>📅 9-10月灵活发布</span></div>
+      <div class="tc-desc">
+        快递点大全 · 社团推荐 · 奖学金攻略 · 图书馆指南 · 转专业攻略 · 期末复习方法<br>
+        <span style="color:var(--text2);">全部零植入，维持账号活跃度和涨粉节奏</span>
+      </div>
+      <span class="tc-implant implant-no">❌ 零植入</span>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 四、第二层：软种草 ====== -->
+<div class="card">
+  <h2>📙 四、第二层选题：软种草（25% · 5条 · 一句话植入）</h2>
+  <p class="sd">这一层的核心技巧：在讲别的事情时顺带提一句学车/二手书。植入不超过一句话，不破坏内容节奏。</p>
+
+  <div class="topic-card">
+    <span class="tc-badge bd-purple">选题 15</span>
+    <div class="tc-body">
+      <div class="tc-title">🎯 大一新生最该做的5件事</div>
+      <div class="tc-meta"><span>📅 7月下</span><span>⏱ 50-60秒</span></div>
+      <div class="tc-desc">
+        ①熟悉校园交朋友 ②稳住GPA别挂科 ③加1-2个社团别贪多 <strong>④趁大一课少把驾照考了，能加素质学分，后面大二大三真没时间</strong> ⑤多拍照记录
+      </div>
+      <span class="tc-implant implant-soft">🟣 学车作为第4件事自然出现</span>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <span class="tc-badge bd-purple">选题 16</span>
+    <div class="tc-body">
+      <div class="tc-title">✅ 开学第一个月要办的事（别漏了）</div>
+      <div class="tc-meta"><span>📅 8月中下</span><span>⏱ 40-50秒</span></div>
+      <div class="tc-desc">
+        办校园卡/宽带→激活学生证→体检→<strong>「有学车想法的趁开学了解下驾校，开学季一般有活动价」</strong>→选课确认。混在待办清单里，像帮你对清单。
+      </div>
+      <span class="tc-implant implant-soft">🟣 学车混在待办事项中</span>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <span class="tc-badge bd-purple">选题 17</span>
+    <div class="tc-body">
+      <div class="tc-title">💰 重邮大一新生一个月大概花多少</div>
+      <div class="tc-meta"><span>📅 8月中</span><span>⏱ 40-50秒</span></div>
+      <div class="tc-desc">
+        吃饭1500-2000→日用品+网费→社交开销→<strong>「想学车的话预留3000+预算，开学季报名比较划算」</strong>。家长和新生都关心开销，顺带提学车预算=自然。
+      </div>
+      <span class="tc-implant implant-soft">🟣 学车预算自然出现</span>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <span class="tc-badge bd-purple">选题 18</span>
+    <div class="tc-body">
+      <div class="tc-title">📜 大学四年最值得考的证</div>
+      <div class="tc-meta"><span>📅 9月中</span><span>⏱ 40-50秒</span></div>
+      <div class="tc-desc">
+        四六级→计算机二级→<strong>驾照（大学不考，工作后请假练车真的痛苦，好多岗位写'有驾照优先'）</strong>→教资→普通话。驾照作为正经规划出现，不是推销。
+      </div>
+      <span class="tc-implant implant-soft">🟣 驾照作为必考证之一</span>
+    </div>
+  </div>
+
+  <div class="topic-card">
+    <span class="tc-badge bd-purple">选题 19</span>
+    <div class="tc-body">
+      <div class="tc-title">🚫 大一最没必要做的几件事</div>
+      <div class="tc-meta"><span>📅 10月上</span><span>⏱ 40-50秒</span></div>
+      <div class="tc-desc">
+        不用急着恋爱→不用加太多社团→不用卷所有课→<strong>不用买全新教材（找学长学姐买二手的能省一半，书况还很好）</strong>。反焦虑=高好感度，二手书=省钱建议不是生意。
+      </div>
+      <span class="tc-implant implant-soft">🟣 二手书首次植入</span>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 五、第三层：促转化 ====== -->
+<div class="card">
+  <h2>📕 五、第三层选题：促转化（5% · 1条 · 唯一主推驾校视频）</h2>
+  <p class="sd">这层严格控制数量。一条就够了，多了号就变味。必须在前两层有足够积累后再发。</p>
+
+  <div class="topic-card" style="border-color:#fbcfe8; background:#fdf2f8;">
+    <span class="tc-badge bd-pink">选题 20</span>
+    <div class="tc-body">
+      <div class="tc-title">🚗 重邮学车怎么选？学长的真实经历</div>
+      <div class="tc-meta"><span>📅 7月下或8月中</span><span>⏱ 60-90秒</span><span>⚠️ 发之前至少已有5-8条泛吸引内容</span></div>
+      <div class="tc-desc">
+        <strong>开头（10秒）：</strong>"最近好多学弟学妹私信问我学车的事，干脆出一条视频说一下"<br>
+        <strong>个人经历（20秒）：</strong>"我对比了学校周边好几家，有的报价便宜但后期加钱，有的教练态度差。最后报了九城，练下来整体还行"<br>
+        <strong>选驾校关键点（30秒）：</strong>①合同一费到底 ②场地离学校多远 ③教练态度能不能换 ④通过率去问学长学姐<br>
+        <strong>收尾CTA（10秒）：</strong>"想了解的私信我，我把负责人微信推你，你自己去问，多对比一下没毛病"<br>
+        <strong style="color:var(--pink);">⚠️ 全程不说具体价格、不说「必选XX驾校」、不踩其他驾校名字</strong>
+      </div>
+      <span class="tc-implant implant-hard">🔴 唯一促转化视频 · 不超过总内容5%</span>
+    </div>
+  </div>
+</div>
+
+<!-- ====== 六、发布SOP ====== -->
+<div class="card">
+  <h2>✅ 六、每条视频发布前检查清单</h2>
+
+  <h3>内容检查</h3>
+  <div class="check-grid">
+    <div class="check-item">✅ 标题包含关键词（重邮/新生/大一/宿舍/食堂）</div>
+    <div class="check-item">✅ 封面有大字标题，一眼看懂</div>
+    <div class="check-item">✅ 引导互动（评论提问/引导私信/引导点赞）</div>
+    <div class="check-item">✅ 话题标签 #重邮 #重庆邮电大学 #大一新生</div>
+    <div class="check-item">✅ 植入比例未超标（泛吸引=0 / 种草=1句 / 促转化=≤5%）</div>
+    <div class="check-item">✅ 口语化学长语气，无营销味</div>
+    <div class="check-item">✅ 不制造焦虑、不虚报数字、不踩其他驾校</div>
+    <div class="check-item">✅ 发布时间：晚上7-9点</div>
+  </div>
+
+  <h3>评论区运营</h3>
+  <div class="check-grid">
+    <div class="check-item">📱 发布后24h内回复所有评论</div>
+    <div class="check-item">📱 有人问学车→评论回「私你了兄弟」转私信</div>
+    <div class="check-item">📱 有人质疑→不公开吵，私信解释</div>
+    <div class="check-item">📱 有人问二手书→回「私信我帮你找」</div>
+  </div>
+</div>
+
+<!-- ====== 七、数据指标 ====== -->
+<div class="card">
+  <h2>📊 七、关键数据指标</h2>
+  <p class="sd">用数据判断内容对不对，而不是凭感觉</p>
+
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>内容类型</th><th>指标</th><th class="td-ok">正常</th><th class="td-warn">需调整</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>泛吸引</strong></td>
+        <td>播放量</td>
+        <td class="td-ok">> 粉丝数 × 3-5倍</td>
+        <td class="td-warn">< 粉丝数 → 选题/标题有问题</td>
+      </tr>
+      <tr>
+        <td><strong>泛吸引</strong></td>
+        <td>互动率</td>
+        <td class="td-ok">5%-10%</td>
+        <td class="td-warn">< 3% → 内容不够有用</td>
+      </tr>
+      <tr>
+        <td><strong>软种草</strong></td>
+        <td>互动率</td>
+        <td class="td-ok">3%-5%</td>
+        <td class="td-warn">< 2% → 植入太生硬</td>
+      </tr>
+      <tr>
+        <td><strong>促转化</strong></td>
+        <td>学车咨询评论数</td>
+        <td class="td-ok">≥ 3-5条</td>
+        <td class="td-warn">0条 → 信任没建够，先回去发干货</td>
+      </tr>
+      <tr>
+        <td><strong>私信</strong></td>
+        <td>转化率</td>
+        <td class="td-ok">每100私信→5-10人报名</td>
+        <td class="td-warn">< 3人 → 话术或时机有问题</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- ====== 八、实战节奏 ====== -->
+<div class="card">
+  <h2>⚡ 八、前10条视频的发布顺序（直接抄）</h2>
+  <p class="sd">这是最关键的冷启动期，按这个顺序发，不用纠结先发哪个后发哪个</p>
+
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-time">第1条 · 6月底</div><div class="tl-text"><strong>「重邮宿舍长啥样」</strong>——新生最关心TOP3，搜索量大，适合第一条试水</div></div>
+    <div class="tl-item"><div class="tl-time">第2条 · 7月初</div><div class="tl-text"><strong>「重邮7个食堂」</strong>——趁热打铁，巩固「这个学长专门讲重邮」的印象</div></div>
+    <div class="tl-item"><div class="tl-time">第3条 · 7月初</div><div class="tl-text"><strong>「一分钟逛完重邮」</strong>——视觉向，完播率高，容易涨粉</div></div>
+    <div class="tl-item"><div class="tl-time">第4条 · 7月中</div><div class="tl-text"><strong>「社团有哪些值得加」</strong>——互动向，评论区会有讨论</div></div>
+    <div class="tl-item"><div class="tl-time">第5条 · 7月下</div><div class="tl-text"><strong>「大一最该做的5件事」</strong>——<span style="color:#7c3aed;">首次软提学车</span>，此时已有一定粉丝基础</div></div>
+    <div class="tl-item"><div class="tl-time">第6条 · 8月初</div><div class="tl-text"><strong>「开学必备清单」</strong>——高收藏率，引导私信拿清单</div></div>
+    <div class="tl-item"><div class="tl-time">第7条 · 8月上</div><div class="tl-text"><strong>「大一一个月花多少」</strong>——<span style="color:#7c3aed;">顺带提学车预算</span></div></div>
+    <div class="tl-item"><div class="tl-time">第8条 · 8月上中</div><div class="tl-text"><strong>「重邮学车怎么选」</strong>——<span style="color:#db2777;">唯一促转化视频</span>，放在8条干货之后发，信任够了</div></div>
+    <div class="tl-item"><div class="tl-time">第9条 · 8月中</div><div class="tl-text"><strong>「周边有什么好玩的」</strong>——纯娱乐内容，稀释推销感（接了第8条的广告感）</div></div>
+    <div class="tl-item"><div class="tl-time">第10条 · 8月中下</div><div class="tl-text"><strong>「军训生存指南」</strong>——焦虑缓解=高好感度，为冲刺期蓄力</div></div>
+  </div>
+</div>
+
+<!-- ====== 底部 ====== -->
+<div class="big-quote">
+  用重邮干货把新生圈进来<br>
+  → 用生活建议让他们信任你<br>
+  → 用一句话软植入让他们主动问<br>
+  → 私信里把代理微信推过去就完事
+</div>
+
+<div class="footnote">
+  <strong>📁 材料来源</strong><br>
+  九城驾校代理手册（最终版）+ 最强招生技巧培训资料 + 合作聊天记录<br>
+  7.14新材料：校园线上营销技巧与话术 + 三篇重邮校园内容模板（地图册/食宿/校园活动）<br><br>
+  选题覆盖6月下旬至10月，全部基于已有素材和个人经验规划。<br>
+  每期视频发布后根据数据反馈微调后续选题。
+</div>
+
+</div>
+</body>
+</html>

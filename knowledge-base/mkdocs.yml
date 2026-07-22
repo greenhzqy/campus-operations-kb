@@ -1,0 +1,135 @@
+site_name: 重邮学长运营知识库
+site_description: 驾校代理 · 校园卡 · 二手书 · 抖音运营 — 一站式内部知识库
+theme:
+  name: material
+  language: zh
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 浅色模式
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: zh
+      separator: '[\s​\-、，。！？；：""''（）]+'
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - 🏠 首页: index.md
+  - 🚗 驾校代理:
+      - 驾校业务总览: jiashu/index.md
+      - 💬 话术库:
+          - 评论区转私信: jiashu/huashu/001-评论区转私信.md
+          - 私信问价格: jiashu/huashu/002-私信问驾校价格.md
+          - 担心隐形消费: jiashu/huashu/003-担心隐形消费教练态度.md
+          - 团报优惠拿证时间: jiashu/huashu/004-团报优惠和拿证时间.md
+          - 学员投诉纠纷: jiashu/huashu/005-学员投诉纠纷处理.md
+          - 学车怎么选: jiashu/huashu/006-学车怎么选建议.md
+          - 常见抗拒处理: jiashu/huashu/007-常见抗拒处理.md
+      - 📋 流程:
+          - 极简引流四步法: jiashu/liucheng/001-极简引流四步法.md
+          - 点对点聊天四步法: jiashu/liucheng/002-点对点聊天四步法.md
+          - 对账结算流程: jiashu/liucheng/003-对账结算流程.md
+      - ⚠️ 风险:
+          - 结算风险: jiashu/fengxian/001-结算风险.md
+          - 口碑风险: jiashu/fengxian/002-学员口碑风险.md
+          - 人设风险: jiashu/fengxian/003-账号人设风险.md
+          - 业务冲突风险: jiashu/fengxian/004-业务冲突风险.md
+          - 合规红线7条: jiashu/fengxian/005-合规红线7条.md
+      - 🛡️ 抗拒处理:
+          - 6种抗拒应对: jiashu/kangju/001-点对点抗拒处理6种.md
+      - 📊 数据速查:
+          - 九城驾校关键数据: jiashu/shuju/001-九城驾校关键数据.md
+  - 📱 校园卡:
+      - 校园卡业务总览: xiaoyuanka/index.md
+      - 💬 话术库:
+          - 加好友首次对话: xiaoyuanka/huashu/001-加好友首次对话.md
+          - 过渡到校园卡: xiaoyuanka/huashu/002-从答疑过渡到校园卡.md
+          - 对方主动问办卡: xiaoyuanka/huashu/003-对方主动问怎么办卡.md
+          - 群内自然植入: xiaoyuanka/huashu/004-群内自然植入.md
+          - 对比三家运营商: xiaoyuanka/huashu/005-对比三家运营商.md
+          - 家长不同意: xiaoyuanka/huashu/006-家长不同意.md
+          - 等录取结果: xiaoyuanka/huashu/007-等录取结果.md
+          - 办卡后售后处理: xiaoyuanka/huashu/008-办卡后售后处理.md
+          - 常见抗拒处理9种: xiaoyuanka/huashu/009-常见抗拒处理9种.md
+      - 📋 流程:
+          - 销售全流程: xiaoyuanka/liucheng/001-销售全流程.md
+          - 点对点聊天四步法: xiaoyuanka/liucheng/002-点对点聊天四步法.md
+          - 出卡操作全流程: xiaoyuanka/liucheng/003-出卡操作全流程.md
+          - 多平台引流策略: xiaoyuanka/liucheng/004-多平台引流策略.md
+      - ⚠️ 风险:
+          - 合规底线7条: xiaoyuanka/fengxian/001-合规底线7条.md
+  - 📚 二手书:
+      - 二手书业务总览: ershushu/index.md
+      - 💬 话术库:
+          - 视频软植入: ershushu/huashu/001-视频中软植入二手书.md
+          - 私信问书: ershushu/huashu/002-私信问有没有某本书.md
+          - 议价犹豫: ershushu/huashu/003-对方觉得贵或犹豫.md
+          - 没有库存: ershushu/huashu/004-要的书没有库存.md
+          - 书况争议售后: ershushu/huashu/005-书况争议售后处理.md
+      - 📋 流程:
+          - 运营全流程: ershushu/liucheng/001-二手书运营全流程.md
+          - 年度运营节奏: ershushu/liucheng/002-年度运营节奏.md
+          - 库存管理方法: ershushu/liucheng/003-库存管理方法.md
+      - ⚠️ 风险:
+          - 风险与应对: ershushu/fengxian/001-二手书风险与应对.md
+  - 🎬 抖音选题:
+      - 选题总览: douyin/index.md
+      - 📐 策略:
+          - 三层漏斗策略: douyin/001-选题总策略三层漏斗.md
+          - 发布时间节奏: douyin/002-发布时间节奏.md
+          - 发布SOP清单: douyin/003-视频发布SOP清单.md
+          - 关键数据指标: douyin/004-关键数据指标.md
+      - 🎯 泛吸引选题:
+          - 宿舍长啥样: douyin/选题-001-宿舍长啥样.md
+          - 七个食堂: douyin/选题-002-七个食堂.md
+          - 一分钟逛校园: douyin/选题-003-一分钟逛校园.md
+          - 开学必备清单: douyin/选题-004-开学必备清单.md
+          - 选课避坑指南: douyin/选题-005-选课避坑指南.md
+          - 军训生存指南: douyin/选题-006-军训生存指南.md
+          - 宿舍违禁品清单: douyin/选题-013-宿舍违禁品清单.md
+          - 志愿与劳动时长: douyin/选题-014-志愿与劳动时长.md
+      - 🌱 软种草选题:
+          - 大一最该做的5件事: douyin/选题-007-大一最该做的5件事.md
+          - 开学第一个月待办: douyin/选题-008-开学第一个月待办.md
+          - 一个月开销多少: douyin/选题-009-一个月开销多少.md
+          - 值得考的证: douyin/选题-010-值得考的证.md
+          - 大一最没必要做的事: douyin/选题-011-大一最没必要做的事.md
+      - 🎯 促转化选题:
+          - 学车怎么选: douyin/选题-012-学车怎么选.md
+  - 📖 复习资料:
+      - 复习资料总览: fuxiziliao/index.md
+      - 📋 资料目录:
+          - 各科目资料清单: fuxiziliao/mulu/001-各科目资料清单.md
+      - 📈 销售策略:
+          - 资料销售策略: fuxiziliao/celue/001-资料销售策略.md
+  - 🎓 新生指南:
+      - 新生指南总览: xinsheng/index.md
+      - 📝 指南:
+          - 选课避坑指南: xinsheng/zhinan/001-选课避坑指南.md
+          - 志愿与劳动时长: xinsheng/zhinan/002-志愿与劳动时长要求.md
+          - 挂VPN教程: xinsheng/zhinan/003-挂VPN教程.md
