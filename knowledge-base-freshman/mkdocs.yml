@@ -1,8 +1,10 @@
 site_name: 重邮新生干货站
 site_description: 校园攻略 · 选课指南 · 复习资料 — 重邮学长学姐为你整理的入学必备干货
+use_directory_urls: false
 theme:
   name: material
   language: zh
+  font: false
   palette:
     - scheme: default
       primary: teal
